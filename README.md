@@ -118,7 +118,7 @@ To deploy your own version:
 
 ## 📬 Contact
 
-- 🌐 Portfolio: [portfolio-master-one-iota.vercel.app](https://portfolio-master-one-iota.vercel.app/)](https://portfolio-n5v3.vercel.app/project)
+- 🌐 Portfolio: https://portfolio-n5v3.vercel.app/project
 - 📝 Blog: [kulmatovs-blog.onrender.com](https://kulmatovs-blog.onrender.com/)
 - 💻 GitHub: [@Jaloliddin-Kulmatov](https://github.com/Jaloliddin-Kulmatov)
 

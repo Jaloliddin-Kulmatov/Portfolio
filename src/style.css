@@ -22,6 +22,12 @@ button:focus {
   box-shadow: none !important;
 }
 
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 /* --------- */
 /*  Preloader */
 /* --------- */
@@ -156,13 +162,26 @@ button:focus {
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
+  .quote-card-view p {
+    text-align: left !important;
+  }
+  .heading {
+    padding-left: 20px !important;
+    font-size: 1.8em !important;
+  }
+  .heading-name {
+    padding-left: 15px !important;
+    font-size: 1.8em !important;
+  }
+  .home-content {
+    padding: 5rem 0 2rem !important;
+  }
 }
 
-
 .avatar-img {
-  max-width: 250px;   /* 👈 change size here */
+  max-width: 250px;
   height: auto;
-  border-radius: 50%; /* optional: make it circle */
+  border-radius: 50%;
 }
 
 .connect {
@@ -252,6 +271,7 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .home-header {
@@ -443,7 +463,6 @@ button:focus {
   padding: 0 !important;
 }
 
-
 .tech-wrapper {
   padding: 80px 20px;
   text-align: center;
@@ -454,9 +473,8 @@ button:focus {
   );
 }
 
-/* TITLE */
 .tech-title {
-  font-size: 3.2rem; /* 🔥 bigger */
+  font-size: 3.2rem;
   margin-bottom: 60px;
   font-weight: 800;
   color: #1a1a2e;
@@ -467,20 +485,18 @@ button:focus {
   color: #2979FF;
 }
 
-/* MAIN BOX */
 .tech-box {
   max-width: 900px;
   margin: 0 auto;
-  padding: 50px; /* 🔥 more space */
+  padding: 50px;
   background: #ffffff;
   border-radius: 22px;
   box-shadow: 0 12px 35px rgba(41, 121, 255, 0.18);
   text-align: left;
 }
 
-/* TEXT */
 .tech-box p {
-  font-size: 1.25rem; /* 🔥 bigger */
+  font-size: 1.25rem;
   margin-bottom: 30px;
   line-height: 1.9;
   color: #1a1a2e;
@@ -488,7 +504,6 @@ button:focus {
   padding-left: 24px;
 }
 
-/* LEFT ACCENT LINE */
 .tech-box p::before {
   content: "";
   position: absolute;
@@ -500,9 +515,8 @@ button:focus {
   border-radius: 10px;
 }
 
-/* HEADINGS */
 .tech-box strong {
-  font-size: 1.35rem; /* 🔥 bigger */
+  font-size: 1.35rem;
   color: #2979FF;
   display: block;
   margin-bottom: 6px;
@@ -510,7 +524,7 @@ button:focus {
 }
 
 .about-section .about-image {
-  max-width: 420px !important;   /* force smaller width */
+  max-width: 420px !important;
   height: auto !important;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -522,21 +536,17 @@ button:focus {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-
-
-
-
 .home-section .home-logo {
-  max-width: 550px;                 /* slightly smaller and balanced */
+  max-width: 550px;
   height: auto;
-  border-radius: 16px;              /* smooth rounded corners */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* soft shadow */
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
 }
 
 .home-section .home-logo:hover {
-  transform: translateY(-5px) scale(1.08); /* subtle lift & zoom */
+  transform: translateY(-5px) scale(1.08);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
@@ -545,7 +555,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(135deg, #e0f0ff, #f0e6ff); /* soft gradient background */
+  background: linear-gradient(135deg, #e0f0ff, #f0e6ff);
   border-radius: 18px;
   transition: background 0.4s ease;
 }

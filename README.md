@@ -1,76 +1,133 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+# 🌐 Jaloliddin Kulmatov — Personal Portfolio
 
-<br/>
+[![React](https://img.shields.io/badge/React-17.0.2-61DAFB?style=flat&logo=react)](https://reactjs.org/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://portfolio-master-one-iota.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-<center>
+Live site: **[[portfolio-master-one-iota.vercel.app](https://portfolio-master-one-iota.vercel.app/](https://portfolio-n5v3.vercel.app/))**
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+---
 
-</center>
+## 📌 About the Project
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+This is a fully responsive personal portfolio website built with **React.js**. It showcases my skills, projects, resume, and blog in a clean, modern design with smooth animations and a particle background. The site is deployed on **Vercel** with automatic redeployment on every push to the main branch.
 
-## TL;DR
+---
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+## 📸 Screenshots
 
-## Built With
+### 🏠 Home
+![Home Page](./Images/home.png)
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+### 👤 About
+![About Page](./Images/about.png)
 
-This project was built using these technologies.
+### 💼 Projects
+![Projects Page](./Images/projects.png)
 
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+---
 
-## Features
+## ✨ Features
 
-**📖 Multi-Page Layout**
+- 🏠 **Home** — Animated introduction with particle background and typewriter effect
+- 👤 **About** — Bio, tech stack, and tools I use
+- 💼 **Projects** — Showcase of my personal and academic projects
+- 📄 **Resume** — Downloadable resume
+- 📝 **Blog** — Link to my personal blog
 
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
+---
 
-**📱 Fully Responsive**
+## 🛠️ Tech Stack
 
-## Getting Started
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, React Bootstrap |
+| Styling | CSS3, Bootstrap 5 |
+| Animations | tsParticles, Typewriter Effect |
+| Icons | React Icons |
+| Routing | React Router DOM v6 |
+| Deployment | Vercel |
 
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
+---
 
-## 🛠 Installation and Setup Instructions
+## 🚀 Getting Started
 
-1. Installation: `npm install`
+### Prerequisites
+- Node.js >= 14
+- npm >= 6
 
-2. In the project directory, you can run: `npm start`
+### Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+```bash
+# Clone the repository
+git clone https://github.com/Jaloliddin-Kulmatov/portfolio.git
 
-## Usage Instructions
+# Navigate into the project
+cd portfolio
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
+# Install dependencies
+npm install --legacy-peer-deps
 
-### Show your support
+# Start the development server
+npm start
+```
 
-Give a ⭐ if you like this website!
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── public/
+├── src/
+│   ├── Assets/          # Images and static files
+│   ├── components/
+│   │   ├── About/       # About page
+│   │   ├── Home/        # Home page
+│   │   ├── Projects/    # Projects page
+│   │   ├── Resume/      # Resume page
+│   │   ├── Navbar.js
+│   │   └── Footer.js
+│   ├── App.js
+│   ├── App.css
+│   └── style.css
+├── package.json
+└── README.md
+```
+
+---
+
+## 🌍 Deployment
+
+This project is deployed on **Vercel**. Every push to the `main` branch triggers an automatic redeployment.
+
+To deploy your own version:
+1. Fork this repository
+2. Go to [vercel.com](https://vercel.com) and import the repo
+3. Vercel will auto-detect React and deploy instantly
+
+---
+
+## 📬 Contact
+
+- 🌐 Portfolio: [portfolio-master-one-iota.vercel.app](https://portfolio-master-one-iota.vercel.app/)
+- 📝 Blog: [kulmatovs-blog.onrender.com](https://kulmatovs-blog.onrender.com/)
+- 💻 GitHub: [@Jaloliddin-Kulmatov](https://github.com/Jaloliddin-Kulmatov)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License — feel free to use it as a template for your own portfolio!
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!

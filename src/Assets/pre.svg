@@ -1,0 +1,42 @@
+<svg width="160" height="160" viewBox="0 0 114 114" xmlns="http://www.w3.org/2000/svg" stroke="#2979FF">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(2 2)" stroke-width="4">
+            <circle cx="10" cy="100" r="10">
+                <animate attributeName="cy"
+                         begin="0s" dur="2.2s"
+                         values="100;10;100;100"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                <animate attributeName="cx"
+                         begin="0s" dur="2.2s"
+                         values="10;54;98;10"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+            </circle>
+            <circle cx="54" cy="10" r="10">
+                <animate attributeName="cy"
+                         begin="0s" dur="2.2s"
+                         values="10;100;100;10"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                <animate attributeName="cx"
+                         begin="0s" dur="2.2s"
+                         values="54;98;10;54"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+            </circle>
+            <circle cx="98" cy="100" r="10">
+                <animate attributeName="cy"
+                         begin="0s" dur="2.2s"
+                         values="100;100;10;100"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+                <animate attributeName="cx"
+                         begin="0s" dur="2.2s"
+                         values="98;10;54;98"
+                         calcMode="linear"
+                         repeatCount="indefinite" />
+            </circle>
+        </g>
+    </g>
+</svg>

@@ -17,13 +17,13 @@ This is a fully responsive personal portfolio website built with **React.js**. I
 ## 📸 Screenshots
 
 ### 🏠 Home
-![Home Page](./Images/home.png)
+<img width="1440" height="857" alt="Screenshot 2026-03-24 at 5 51 40 PM" src="https://github.com/user-attachments/assets/c2b1eef9-e9b3-45fa-b521-a1e99816d5bc" />
 
 ### 👤 About
-![About Page](./Images/about.png)
+<img width="1438" height="851" alt="Screenshot 2026-03-24 at 5 52 04 PM" src="https://github.com/user-attachments/assets/959513e4-c307-473c-ae36-84332db03c56" />
 
 ### 💼 Projects
-![Projects Page](./Images/projects.png)
+<img width="1438" height="842" alt="Screenshot 2026-03-24 at 5 52 24 PM" src="https://github.com/user-attachments/assets/be0429ca-b6a8-4b23-a9f8-949c5cb2ac6d" />
 
 ---
 

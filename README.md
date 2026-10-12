@@ -4,7 +4,7 @@
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://portfolio-n5v3.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Live site: **[[portfolio-n5v3.vercel.app](https://portfolio-n5v3.vercel.app/)](https://portfolio-jk-sage.vercel.app/)**
+Live site: **https://portfolio-jk-sage.vercel.app/**
 
 ---
 

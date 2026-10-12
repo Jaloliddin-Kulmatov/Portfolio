@@ -15,7 +15,7 @@ function AboutCard() {
               <span className="purple">Engineering Student</span> at{" "}
               <span className="purple">Jeonbuk National University</span>, South Korea, on a full scholarship.
               <br />
-              GPA <span className="purple">4.47/4.5</span>, ranked 1st of 63 international students in Engineering.
+              GPA <span className="purple">4.47/4.5</span>, ranked 1st of 69 international students in Engineering.
               <br />
               My interests include{" "}
               <span className="purple">Web Development, ML, Data Science</span> and{" "}

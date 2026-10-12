@@ -15,12 +15,15 @@ function AboutCard() {
               <span className="purple">Engineering Student</span> at{" "}
               <span className="purple">Jeonbuk National University</span>, South Korea, on a full scholarship.
               <br />
-              My interests include{" "}
-              <span className="purple">ML, Robotics, Data Science</span> and{" "}
-              <span className="purple">Web Development</span>.
+              GPA <span className="purple">4.47/4.5</span>, ranked 1st of 63 international students in Engineering.
               <br />
-              I'm also co-building{" "}
-              <span className="purple">My Start-ups</span> — coming very soon.
+              My interests include{" "}
+              <span className="purple">Web Development, ML, Data Science</span> and{" "}
+              <span className="purple">problem-solving</span>.
+              <br />
+              I founded{" "}
+              <span className="purple">ICOM</span>, an AI platform for international students in Korea, and I'm now on exchange at{" "}
+              <span className="purple">Universiti Malaya</span>.
               <br />
               <br />
               Outside of coding, I enjoy:

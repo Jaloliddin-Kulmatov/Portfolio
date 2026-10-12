@@ -13,26 +13,22 @@ function Home2() {
                 LET ME <span className="purple">INTRODUCE</span> MYSELF
               </h1>
               <p className="home-about-body">
-                I’m <b className="purple">Jaloliddin Kulmatov</b>, a passionate Software Engineer focused on building reliable, scalable, and high-performance applications. I enjoy transforming ideas into products that solve real-world problems.
+                I’m <b className="purple">Jaloliddin Kulmatov</b>, an engineering student at Jeonbuk National University and the founder of <b className="purple">ICOM</b>, an AI platform for international students in Korea. I love turning ideas into products that solve real problems.
                 <br /><br />
                 I’m proficient in
                 <i>
-                  <b className="purple"> Python, C++, Flask, HTML, and Matplotlib </b>
+                  <b className="purple"> Python, TypeScript, Next.js, Flask and PostgreSQL</b>
                 </i>
-                — and I work seamlessly across both backend and frontend development.
+                , and I work on both the front end and the back end.
                 <br /><br />
                 My core interests are
                 <i>
-                  <b className="purple"> Web Applications, AI & Machine Learning, and Blockchain Solutions</b>
+                  <b className="purple"> Web Development, Machine Learning, Data Science and AI for education</b>
                 </i>
-                , and I am always exploring innovative ways to integrate modern technologies into meaningful projects.
+                . I am always looking for new ways to use AI in useful projects.
                 <br /><br />
-                Whenever possible, I love building projects using
-                <b className="purple"> Python </b> and modern frameworks like
-                <i>
-                  <b className="purple"> Flask, </b>
-                </i>
-                bringing creative ideas to life on the web.
+                My work so far includes a <b className="purple">patent</b>, a <b className="purple">conference paper</b>, and research support in a
+                <b className="purple"> solar cell lab</b>.
               </p>
             </Col>
             <Col md={4} className="myAvtar">

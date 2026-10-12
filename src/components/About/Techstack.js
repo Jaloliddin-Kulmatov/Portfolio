@@ -13,7 +13,7 @@ function Techstack() {
             <div className="tech-box">
 
                 <p><strong>Programming Languages</strong><br/>
-                    Python • C++ • JavaScript • TypeScript
+                    Python • TypeScript • JavaScript • C • C++ • SQL
                 </p>
 
                 <p><strong>Frontend Development</strong><br/>
@@ -21,20 +21,20 @@ function Techstack() {
                 </p>
 
                 <p><strong>Backend Development</strong><br/>
-                    Node.js • Flask
+                    Flask • FastAPI • SQLAlchemy • REST APIs • JWT
                 </p>
 
                 <p><strong>Databases</strong><br/>
-                    MongoDB • PostgreSQL
+                    PostgreSQL (Neon) • SQLite
                 </p>
 
                 <p><strong>AI / Data</strong><br/>
-                    NumPy • Pandas • Matplotlib • OpenAI API • Chatbots •
-                    Prompt Engineering • LLM Integration
+                    NumPy • Pandas • Matplotlib • Seaborn • Plotly • scikit-learn •
+                    OpenAI &amp; Groq LLM APIs • Function Calling • Embeddings • Hugging Face • XTTS voice cloning
                 </p>
 
                 <p><strong>Tools</strong><br/>
-                    Git • Docker
+                    Git • GitHub • Vercel • Render • COMSOL • PC1D • SCAPS-1D
                 </p>
 
             </div>

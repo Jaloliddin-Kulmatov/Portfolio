@@ -3,63 +3,120 @@ import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
 import Particle from "../Particle";
 
 // Images
-import blogWeb from "../../Assets/Projects/blog_web.png";
-import foodReal from "../../Assets/Projects/food_real.png";
-import amazonPrice from "../../Assets/Projects/amazon_price.jpg"; // placeholder
+import icom from "../../Assets/Projects/icom.jpg";
+import talaba from "../../Assets/Projects/talaba.jpg";
+import ctest from "../../Assets/Projects/ctest.jpg";
+import scaps from "../../Assets/Projects/scaps.jpg";
+import findMe from "../../Assets/Projects/findme.jpg";
+import blogWeb from "../../Assets/Projects/blog_web.jpg";
+import foodReal from "../../Assets/Projects/food_real.jpg";
+
+const GH = "https://github.com/Jaloliddin-Kulmatov/";
 
 function Projects() {
+  const aiProjects = [
+    {
+      img: icom,
+      title: "ICOM",
+      description:
+          "Platform for international students in Korea: chat, internships, visa and housing guides, banking and an AI assistant. Internship posts are collected and translated with AI twice a day. Led to a patent and a conference paper.",
+      tech: ["Next.js", "TypeScript", "Flask", "PostgreSQL", "Groq LLM"],
+      github: GH + "ICOM-v1",
+      demo: "https://icom.ai.kr",
+    },
+    {
+      img: talaba,
+      title: "TALABA",
+      description:
+          "ICOM for students in Uzbekistan, in Uzbek: community, jobs, university admission help, housing, scholarships and an AI assistant.",
+      tech: ["Next.js", "TypeScript", "Tailwind", "Python"],
+      github: GH + "talaba",
+      demo: "https://talaba-zeta.vercel.app",
+    },
+    {
+      title: "Nori (노리다)",
+      description:
+          "Upload an English CV and get a Korean-style résumé PDF. AI translates and reorganizes it for jobs in Korea.",
+      tech: ["Flask", "Groq LLM", "pdfplumber", "ReportLab"],
+      github: GH + "Nori",
+    },
+    {
+      title: "VoiceMimic",
+      description:
+          "Record or upload a short voice clip, type any text, and hear it in that voice with XTTS-v2 voice cloning.",
+      tech: ["Python", "Flask", "XTTS-v2", "JavaScript"],
+      github: GH + "voice-mimic",
+    },
+  ];
+
   const webProjects = [
     {
-      img: blogWeb,
-      title: "Kulmatovs_blog_v2",
+      img: ctest,
+      title: "C-Test Trainer",
       description:
-          "Personal blog built with Flask, HTML & CSS. Easily manage content and supports dark/light modes.",
-      tech: ["Flask", "HTML", "CSS"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Kulmatovs_blog_v2",
+          "Practice site for the German onSET test: 4 full timed tests, 24 grammar topics, 593 vocabulary words, a mistake notebook and progress charts.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      github: GH + "ctest-trainer",
+      demo: "https://ctest-trainer-eight.vercel.app",
+    },
+    {
+      img: scaps,
+      title: "SCAPS IV Extractor",
+      description:
+          "Research tool from the JBNU Solar Cell Lab: turns SCAPS-1D simulation files into one Excel table (Voc, Jsc, FF, PCE). Runs in the browser.",
+      tech: ["JavaScript", "Python", "FastAPI"],
+      github: GH + "Scaps_data_parameters",
+      demo: "https://scaps-data-1b9a.vercel.app",
+    },
+    {
+      img: findMe,
+      title: "Find_me",
+      description:
+          "Finds where a username exists across 40+ websites, with Python serverless functions on Vercel.",
+      tech: ["Python", "Serverless", "JavaScript"],
+      github: GH + "Find_me",
+      demo: "https://find-me-sandy.vercel.app",
+    },
+    {
+      img: blogWeb,
+      title: "Flask Blog",
+      description:
+          "Blog platform with login, admin roles, a rich-text editor, comments and a contact form. PostgreSQL on Render.",
+      tech: ["Flask", "PostgreSQL", "Bootstrap"],
+      github: GH + "Kulmatovs_blog_v2",
       demo: "https://kulmatovs-blog.onrender.com/",
     },
     {
       img: foodReal,
-      title: "Food_Reel",
+      title: "Food Reels",
       description:
-          "Recipe / food app built with Firebase, HTML & CSS. Users can explore and search recipes dynamically.",
-      tech: ["Firebase", "HTML", "CSS"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Food_Reel",
-      demo: "https://food-reel.onrender.com/",
-    },
-    {
-      img: amazonPrice,
-      title: "Amazon_price_alert",
-      description:
-          "Tracks Amazon product prices and sends notifications when they drop below a threshold.",
-      tech: ["Python", "Web Scraping", "Automation"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Amazon_price_alert",
+          "Hackathon prototype: watch short food videos and order the dish without leaving the feed. Mobile-first web app.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      github: GH + "Food_Reel",
     },
   ];
 
   const pythonDataProjects = [
     {
-      title: "Price_vs_search_trend_data_analyze",
+      title: "Multivariable Regression",
       description:
-          "Analyzed product prices vs search trends using Python & Pandas for actionable insights.",
+          "House price valuation model with multivariable regression on the Boston housing data.",
+      tech: ["Python", "Jupyter", "scikit-learn"],
+      github: GH + "Multivariable_Regression",
+    },
+    {
+      title: "Price vs Search Trends",
+      description:
+          "Analyzed product prices against search trends using Python and Pandas.",
       tech: ["Python", "Pandas", "Data Analysis"],
-      github:
-          "https://github.com/Jaloliddin-Kulmatov/Price_vs_search_trend_data_analyze",
+      github: GH + "Price_vs_search_trend_data_analyze",
     },
     {
-      title: "Internet_Speed_complain_twits",
+      title: "Cheapest Flight Finder",
       description:
-          "Analyzed Twitter data for complaints about internet speed using NLP techniques.",
-      tech: ["Python", "NLP", "Data Analysis"],
-      github:
-          "https://github.com/Jaloliddin-Kulmatov/Internet_Speed_complain_twits",
-    },
-    {
-      title: "Cheepest_flight_finder",
-      description:
-          "Web scraper and analyzer to find the cheapest flights across multiple providers.",
-      tech: ["Python", "Web Scraping", "Data Analysis"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Cheepest_flight_finder",
+          "Searches flight APIs and sends an alert when a cheaper flight appears.",
+      tech: ["Python", "APIs", "Automation"],
+      github: GH + "Cheepest_flight_finder",
     },
   ];
 
@@ -69,21 +126,21 @@ function Projects() {
       description:
           "Classic Pong game implemented in Python with simple AI opponent and score tracking.",
       tech: ["Python", "Game Development"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Pong_game",
+      github: GH + "Pong_game",
     },
     {
       title: "Snake_game",
       description:
           "Classic Snake game implemented in Python with increasing difficulty.",
       tech: ["Python", "Game Development"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Snake_game",
+      github: GH + "Snake_game",
     },
     {
       title: "Turtle_race_game",
       description:
           "Race simulation game using Python Turtle graphics to simulate competitive racing.",
       tech: ["Python", "Turtle Graphics", "Game Development"],
-      github: "https://github.com/Jaloliddin-Kulmatov/Turtle_race_game",
+      github: GH + "Turtle_race_game",
     },
   ];
 
@@ -145,10 +202,13 @@ function Projects() {
             My Recent <strong className="purple">Projects</strong>
           </h1>
           <p className="text-center mb-5" style={{ color: "#000" }}>
-            A few projects I've built recently
+            Products, research tools and experiments I've built
           </p>
 
-          <h2 className="group-heading mb-3 text-primary">🌐 Web Apps</h2>
+          <h2 className="group-heading mb-3 text-primary">🤖 AI &amp; Full-Stack Products</h2>
+          <Row>{aiProjects.map((proj, idx) => renderProjectCard(proj, idx))}</Row>
+
+          <h2 className="group-heading mt-5 mb-3 text-primary">🌐 Tools &amp; Websites</h2>
           <Row>{webProjects.map((proj, idx) => renderProjectCard(proj, idx))}</Row>
 
           <h2 className="group-heading mt-5 mb-3 text-primary">🐍 Python Data Projects</h2>

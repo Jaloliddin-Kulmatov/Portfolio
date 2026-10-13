@@ -1,133 +1,60 @@
-# 🌐 Jaloliddin Kulmatov — Personal Portfolio
+# Portfolio with admin panel
 
-[![React](https://img.shields.io/badge/React-17.0.2-61DAFB?style=flat&logo=react)](https://reactjs.org/)
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://portfolio-n5v3.vercel.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+Personal portfolio of Jaloliddin Kulmatov. Edit every text and project from `/admin`. No code changes needed.
 
-Live site: **[portfolio-n5v3.vercel.app](https://portfolio-n5v3.vercel.app/)**
+- **Public site** (`/`): intro, highlights, about, projects with filters, experience, skills, awards, contact.
+- **Admin panel** (`/admin`): password login. Edit profile, links, highlights, projects (add, edit, reorder, delete,
+  upload images), experience, skills and awards. Press **Save changes** and the site updates right away.
 
----
+Built with Next.js 15 (App Router), React 19 and TypeScript. Content is stored as one JSON document in
+Neon Postgres. Uploads go to Vercel Blob.
 
-## 📌 About the Project
+## Run on your Mac
 
-This is a fully responsive personal portfolio website built with **React.js**. It showcases my skills, projects, resume, and blog in a clean, modern design with smooth animations and a particle background. The site is deployed on **Vercel** with automatic redeployment on every push to the main branch.
-
----
-
-## 📸 Screenshots
-
-### 🏠 Home
-<img width="1440" height="857" alt="Home Page" src="https://github.com/user-attachments/assets/c2b1eef9-e9b3-45fa-b521-a1e99816d5bc" />
-
-### 👤 About
-<img width="1438" height="851" alt="About Page" src="https://github.com/user-attachments/assets/959513e4-c307-473c-ae36-84332db03c56" />
-
-### 💼 Projects
-<img width="1438" height="842" alt="Projects Page" src="https://github.com/user-attachments/assets/be0429ca-b6a8-4b23-a9f8-949c5cb2ac6d" />
-
----
-
-## ✨ Features
-
-- 🏠 **Home** — Animated introduction with particle background and typewriter effect
-- 👤 **About** — Bio, tech stack, and tools I use
-- 💼 **Projects** — Showcase of my personal and academic projects
-- 📄 **Resume** — Downloadable resume
-- 📝 **Blog** — Link to my personal blog
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Technologies |
-|---|---|
-| Frontend | React.js, React Bootstrap |
-| Styling | CSS3, Bootstrap 5 |
-| Animations | tsParticles, Typewriter Effect |
-| Icons | React Icons |
-| Routing | React Router DOM v6 |
-| Deployment | Vercel |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js >= 14
-- npm >= 6
-
-### Installation
+Requires Node.js 22 LTS (<https://nodejs.org>).
 
 ```bash
-# Clone the repository
-git clone https://github.com/Jaloliddin-Kulmatov/portfolio.git
-
-# Navigate into the project
-cd portfolio
-
-# Install dependencies
-npm install --legacy-peer-deps
-
-# Start the development server
-npm start
+cp .env.example .env.local      # then fill in the values
+npm install
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open <http://localhost:3000>, and <http://localhost:3000/admin> to edit.
 
-### Build for Production
+Without `DATABASE_URL` the site shows the built-in content from `src/lib/content.ts`, and the admin panel opens
+but can't save.
 
-```bash
-npm run build
+## Deploy on Vercel (free)
+
+1. Push this folder to a new GitHub repository, for example `portfolio-admin`.
+2. In Vercel: **Add New → Project**, import the repository, and press **Deploy**.
+3. In the project's **Settings → Environment Variables**, add:
+   - `DATABASE_URL`: from Neon (**Dashboard → Connection details**). A free Neon project is enough.
+   - `ADMIN_PASSWORD`: a long password only you know.
+   - `SESSION_SECRET`: a random string, made with `openssl rand -hex 32`.
+4. Optional, for uploads: **Storage → Create → Blob**, and connect it to the project. Vercel adds
+   `BLOB_READ_WRITE_TOKEN` for you.
+5. Redeploy. Go to `https://<your-site>/admin`, log in, and press **Save changes** once. That copies the built-in
+   content into the database. From then on, edit everything there.
+
+The table (`site_content`) is created automatically on the first save.
+
+## Where things are
+
+```
+src/lib/content.ts         content types and the starting content
+src/lib/db.ts              read/save the content in Neon
+src/lib/auth.ts            password check and signed login cookie
+src/middleware.ts          protects /admin
+src/app/page.tsx           public site
+src/components/ProjectGrid.tsx  project cards and filters
+src/app/admin/             login page, editor page, server actions (save, upload)
+src/components/Editor.tsx  the admin editor
+public/                    photo, CV and project screenshots
 ```
 
----
+## Security notes
 
-## 📁 Project Structure
-
-```
-portfolio/
-├── public/
-├── src/
-│   ├── Assets/          # Images and static files
-│   ├── components/
-│   │   ├── About/       # About page
-│   │   ├── Home/        # Home page
-│   │   ├── Projects/    # Projects page
-│   │   ├── Resume/      # Resume page
-│   │   ├── Navbar.js
-│   │   └── Footer.js
-│   ├── App.js
-│   ├── App.css
-│   └── style.css
-├── package.json
-└── README.md
-```
-
----
-
-## 🌍 Deployment
-
-This project is deployed on **Vercel**. Every push to the `main` branch triggers an automatic redeployment.
-
-To deploy your own version:
-1. Fork this repository
-2. Go to [vercel.com](https://vercel.com) and import the repo
-3. Vercel will auto-detect React and deploy instantly
-
----
-
-## 📬 Contact
-
-- 🌐 Portfolio: [portfolio-n5v3.vercel.app](https://portfolio-n5v3.vercel.app/)
-- 📝 Blog: [kulmatovs-blog.onrender.com](https://kulmatovs-blog.onrender.com/)
-- 💻 GitHub: [@Jaloliddin-Kulmatov](https://github.com/Jaloliddin-Kulmatov)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License — feel free to use it as a template for your own portfolio!
-
----
-
-⭐ If you like this project, consider giving it a star on GitHub!
+- Only the admin password can save changes. The login cookie is httpOnly, signed and expires after 7 days.
+- Saved text is trimmed and length-limited; links must start with `https://`, `http://` or `/`.
+- Uploads accept JPG, PNG, WebP, GIF and PDF up to 4 MB.

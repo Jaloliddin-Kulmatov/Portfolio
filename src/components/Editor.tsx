@@ -94,11 +94,11 @@ export function Editor({ initial, canSave }: { initial: SiteContent; canSave: bo
             <Field label="Name" value={c.profile.name} onChange={(v) => setProfile("name", v)} />
             <Field label="Headline" value={c.profile.headline} onChange={(v) => setProfile("headline", v)} />
             <Field label="Short intro (top of the page)" value={c.profile.intro} onChange={(v) => setProfile("intro", v)} multiline />
-            <Field
+            <ListField
               label="About (one paragraph per line)"
-              value={c.profile.about.join("\n")}
-              onChange={(v) => setProfile("about", lines(v))}
-              multiline
+              value={c.profile.about}
+              separator="line"
+              onChange={(v) => setProfile("about", v)}
               rows={6}
             />
             <div className="grid2">
@@ -161,7 +161,7 @@ export function Editor({ initial, canSave }: { initial: SiteContent; canSave: bo
                     <Field label="Category" value={p.category} onChange={(v) => setProject(i, { category: v })} />
                   </div>
                   <Field label="Description" value={p.summary} onChange={(v) => setProject(i, { summary: v })} multiline />
-                  <Field label="Technologies (comma separated)" value={p.tech.join(", ")} onChange={(v) => setProject(i, { tech: commas(v) })} />
+                  <ListField label="Technologies (comma separated)" value={p.tech} separator="comma" onChange={(v) => setProject(i, { tech: v })} />
                   <div className="grid2">
                     <Field label="GitHub link" value={p.github} onChange={(v) => setProject(i, { github: v })} />
                     <Field label="Live site link" value={p.demo} onChange={(v) => setProject(i, { demo: v })} />
@@ -199,7 +199,7 @@ export function Editor({ initial, canSave }: { initial: SiteContent; canSave: bo
                     <Field label="Organization" value={e.org} onChange={(v) => setExp(i, { org: v })} />
                   </div>
                   <Field label="Period" value={e.period} onChange={(v) => setExp(i, { period: v })} />
-                  <Field label="Points (one per line)" value={e.bullets.join("\n")} onChange={(v) => setExp(i, { bullets: lines(v) })} multiline rows={4} />
+                  <ListField label="Points (one per line)" value={e.bullets} separator="line" onChange={(v) => setExp(i, { bullets: v })} rows={4} />
                   <div className="row">
                     <button className="btn" onClick={() => update((d) => ({ ...d, experience: move(d.experience, i, -1) }))} disabled={i === 0}>↑ Up</button>
                     <button className="btn" onClick={() => update((d) => ({ ...d, experience: move(d.experience, i, 1) }))} disabled={i === c.experience.length - 1}>↓ Down</button>
@@ -217,14 +217,14 @@ export function Editor({ initial, canSave }: { initial: SiteContent; canSave: bo
             {c.skills.map((g, i) => (
               <div className="grid-link" key={g.id}>
                 <Field label="Group" value={g.name} onChange={(v) => setSkill(i, { name: v })} />
-                <Field label="Skills (comma separated)" value={g.items.join(", ")} onChange={(v) => setSkill(i, { items: commas(v) })} />
+                <ListField label="Skills (comma separated)" value={g.items} separator="comma" onChange={(v) => setSkill(i, { items: v })} rows={2} />
                 <button className="btn ghost danger" onClick={() => update((d) => ({ ...d, skills: d.skills.filter((_, k) => k !== i) }))}>Remove</button>
               </div>
             ))}
             <button className="btn" onClick={() => update((d) => ({ ...d, skills: [...d.skills, { id: newId(), name: "", items: [] }] }))}>+ Add group</button>
 
             <h2 style={{ marginTop: 32 }}>Awards & publications</h2>
-            <Field label="One per line" value={c.awards.join("\n")} onChange={(v) => update((d) => ({ ...d, awards: lines(v) }))} multiline rows={8} />
+            <ListField label="One per line" value={c.awards} separator="line" onChange={(v) => update((d) => ({ ...d, awards: v }))} rows={8} />
           </section>
         )}
       </main>
@@ -241,6 +241,36 @@ function Field({ label, value, onChange, multiline, rows = 3 }: { label: string;
       ) : (
         <input value={value} onChange={(e) => onChange(e.target.value)} />
       )}
+    </label>
+  );
+}
+
+/**
+ * A list edited as text: comma separated ("Python, SQL") or one item per line.
+ * The text box keeps exactly what you type (trailing commas, empty new lines), and
+ * only the parsed list is sent up. It re-syncs if the list changes from outside.
+ */
+function ListField({ label, value, separator, onChange, rows = 3 }: { label: string; value: string[]; separator: "comma" | "line"; onChange: (v: string[]) => void; rows?: number }) {
+  const parse = separator === "comma" ? commas : lines;
+  const join = (items: string[]) => items.join(separator === "comma" ? ", " : "\n");
+  const [text, setText] = useState(() => join(value));
+
+  useEffect(() => {
+    if (join(parse(text)) !== join(value)) setText(join(value));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value]);
+
+  return (
+    <label className="field">
+      <span>{label}</span>
+      <textarea
+        value={text}
+        rows={rows}
+        onChange={(e) => {
+          setText(e.target.value);
+          onChange(parse(e.target.value));
+        }}
+      />
     </label>
   );
 }
